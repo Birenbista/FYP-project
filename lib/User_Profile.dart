@@ -1,13 +1,35 @@
 import 'package:flutter/material.dart';
+import 'package:fyp_app/Main_Drawer.dart';
 
 class UserProfile extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        toolbarHeight: 65,
         backgroundColor: Colors.grey,
-        title: Text('User Profile'),
+        title: Text('Royal Enfield Bike Servicing'),
+        actions: [
+          Padding(
+            padding: EdgeInsets.all(2),
+            child: Column(
+              children: <Widget>[
+                Container(
+                  width: 60,
+                  height: 60,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    image: DecorationImage(
+                      image: AssetImage('Assets/logo.png'),
+                    ),
+                  ),
+                ),
+              ],
+            ),
+          ),
+        ],
       ),
+      drawer: MainDrawer(),
       body: Column(
         children: <Widget>[
           Padding(

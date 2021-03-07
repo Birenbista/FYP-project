@@ -1,6 +1,9 @@
 import 'package:flutter/material.dart';
+import 'package:fyp_app/Setting_Page.dart';
 
+import 'Homepage.dart';
 import 'User_Profile.dart';
+import 'main.dart';
 
 class MainDrawer extends StatelessWidget {
   @override
@@ -36,6 +39,17 @@ class MainDrawer extends StatelessWidget {
           )),
         ),
         ListTile(
+            leading: Icon(Icons.home),
+            title: Text(
+              'Home',
+              style: TextStyle(fontSize: 20),
+            ),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Home()));
+            }),
+        ListTile(
             leading: Icon(Icons.person),
             title: Text(
               'Profile',
@@ -59,7 +73,11 @@ class MainDrawer extends StatelessWidget {
               'Settings',
               style: TextStyle(fontSize: 20),
             ),
-            onTap: () {}),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Settings()));
+            }),
         ListTile(
             leading: Icon(Icons.bike_scooter),
             title: Text(
@@ -73,7 +91,11 @@ class MainDrawer extends StatelessWidget {
               'Logout',
               style: TextStyle(fontSize: 20),
             ),
-            onTap: () {}),
+            onTap: () {
+              Navigator.of(context).pop();
+              Navigator.push(
+                  context, MaterialPageRoute(builder: (context) => Login()));
+            }),
         Container(
             alignment: Alignment.center,
             padding: EdgeInsets.all(10),

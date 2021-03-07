@@ -1,6 +1,8 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
+import 'package:fyp_app/Booking.dart';
+import 'package:fyp_app/Feedback.dart';
 import 'package:fyp_app/Main_Drawer.dart';
 
 class Home extends StatefulWidget {
@@ -49,9 +51,38 @@ class Homepage extends State<Home> {
               child: RaisedButton(
                 textColor: Colors.white,
                 color: Colors.grey,
-                child: Text(
-                  'Book Bike servicing',
-                  style: TextStyle(fontSize: 30),
+                child: ListTile(
+                  title: Text(
+                    "Book Bike Servicing",
+                    style: TextStyle(color: Colors.black, fontSize: 27),
+                  ),
+                  trailing: Icon(
+                    Icons.keyboard_arrow_right,
+                    size: 40,
+                  ),
+                ),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => Booking()));
+                },
+              ),
+            ),
+            Container(
+              height: 150,
+              width: 500,
+              padding: EdgeInsets.all(5),
+              child: RaisedButton(
+                textColor: Colors.white,
+                color: Colors.grey,
+                child: ListTile(
+                  title: Text(
+                    "View Service Centre",
+                    style: TextStyle(color: Colors.black, fontSize: 27),
+                  ),
+                  trailing: Icon(
+                    Icons.keyboard_arrow_right,
+                    size: 40,
+                  ),
                 ),
                 onPressed: () {},
               ),
@@ -63,9 +94,15 @@ class Homepage extends State<Home> {
               child: RaisedButton(
                 textColor: Colors.white,
                 color: Colors.grey,
-                child: Text(
-                  'View Service Centers',
-                  style: TextStyle(fontSize: 30),
+                child: ListTile(
+                  title: Text(
+                    "View Bike Accessories",
+                    style: TextStyle(color: Colors.black, fontSize: 27),
+                  ),
+                  trailing: Icon(
+                    Icons.keyboard_arrow_right,
+                    size: 40,
+                  ),
                 ),
                 onPressed: () {},
               ),
@@ -77,25 +114,20 @@ class Homepage extends State<Home> {
               child: RaisedButton(
                 textColor: Colors.white,
                 color: Colors.grey,
-                child: Text(
-                  'View Bike Accessories',
-                  style: TextStyle(fontSize: 30),
+                child: ListTile(
+                  title: Text(
+                    "Give Feedback",
+                    style: TextStyle(color: Colors.black, fontSize: 27),
+                  ),
+                  trailing: Icon(
+                    Icons.keyboard_arrow_right,
+                    size: 40,
+                  ),
                 ),
-                onPressed: () {},
-              ),
-            ),
-            Container(
-              height: 150,
-              width: 500,
-              padding: EdgeInsets.all(5),
-              child: RaisedButton(
-                textColor: Colors.white,
-                color: Colors.grey,
-                child: Text(
-                  'Give Feedback',
-                  style: TextStyle(fontSize: 30),
-                ),
-                onPressed: () {},
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => FeedbackForm()));
+                },
               ),
             ),
           ],
