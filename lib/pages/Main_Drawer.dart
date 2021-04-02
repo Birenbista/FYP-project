@@ -1,9 +1,10 @@
 import 'package:flutter/material.dart';
-import 'package:fyp_app/Setting_Page.dart';
+import 'package:fyp_app/pages/Setting_Page.dart';
 
 import 'Homepage.dart';
 import 'User_Profile.dart';
-import 'main.dart';
+import '../main.dart';
+import 'login.dart';
 
 class MainDrawer extends StatelessWidget {
   @override
@@ -68,6 +69,13 @@ class MainDrawer extends StatelessWidget {
             ),
             onTap: () {}),
         ListTile(
+            leading: Icon(Icons.assignment_turned_in),
+            title: Text(
+              'Booking Details',
+              style: TextStyle(fontSize: 20),
+            ),
+            onTap: () {}),
+        ListTile(
             leading: Icon(Icons.settings),
             title: Text(
               'Settings',
@@ -98,18 +106,18 @@ class MainDrawer extends StatelessWidget {
             }),
         Container(
             alignment: Alignment.center,
-            padding: EdgeInsets.all(10),
+            padding: EdgeInsets.all(5),
             child: Text(
               'Contact Us:',
-              style: TextStyle(fontSize: 35, color: Colors.black),
+              style: TextStyle(fontSize: 25, color: Colors.black),
             )),
         Container(
             alignment: Alignment.center,
-            padding: EdgeInsets.all(10),
+            padding: EdgeInsets.all(5),
             child: Text(
               '9849028037\n'
               '9861946478',
-              style: TextStyle(fontSize: 29, color: Colors.black),
+              style: TextStyle(fontSize: 20, color: Colors.black),
             )),
       ],
     ));

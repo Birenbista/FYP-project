@@ -1,9 +1,9 @@
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
-import 'package:fyp_app/Booking.dart';
-import 'package:fyp_app/Feedback.dart';
-import 'package:fyp_app/Main_Drawer.dart';
+import 'package:fyp_app/pages/Booking.dart';
+import 'package:fyp_app/pages/Feedback.dart';
+import 'package:fyp_app/pages/Main_Drawer.dart';
 
 class Home extends StatefulWidget {
   @override

@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:fyp_app/Main_Drawer.dart';
+import 'package:fyp_app/pages/Main_Drawer.dart';
 
 class Settings extends StatefulWidget {
   @override
@@ -9,6 +9,7 @@ class Settings extends StatefulWidget {
 }
 
 class SettingPage extends State<Settings> {
+  //bool acceptTerms = false;
   Widget build(BuildContext context) {
     return Scaffold(
         appBar: AppBar(
@@ -107,33 +108,48 @@ class SettingPage extends State<Settings> {
               activeColor: Colors.blueGrey,
               contentPadding: const EdgeInsets.all(15),
               value: true,
+              //value: acceptTerms,
               title: Text(
                 "Recieve notifications",
                 style: TextStyle(fontSize: 20),
               ),
-              onChanged: (val) {},
+              onChanged: (bool value) {
+                setState(() {
+                  // acceptTerms = value;
+                });
+              },
             ),
             SwitchListTile(
               dense: true,
               activeColor: Colors.blueGrey,
               contentPadding: const EdgeInsets.all(10),
               value: true,
+              //value: acceptTerms,
               title: Text(
                 "Recieve offer notifications",
                 style: TextStyle(fontSize: 20),
               ),
-              onChanged: (val) {},
+              onChanged: (bool value) {
+                setState(() {
+                  // acceptTerms = value;
+                });
+              },
             ),
             SwitchListTile(
               dense: true,
               activeColor: Colors.blueGrey,
               contentPadding: const EdgeInsets.all(10),
-              value: false,
+              value: true,
+              //value: acceptTerms,
               title: Text(
                 "Recieve App Updates",
                 style: TextStyle(fontSize: 20),
               ),
-              onChanged: null,
+              onChanged: (bool value) {
+                setState(() {
+                  //  acceptTerms = value;
+                });
+              },
             )
           ],
         )));

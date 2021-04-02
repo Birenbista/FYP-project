@@ -21,7 +21,13 @@ class SignupPage extends State<Signup> {
           backgroundColor: Colors.grey,
           title: Text('Signup Page'),
         ),
-        body: Padding(
+        body: Container(
+            decoration: BoxDecoration(
+                image: DecorationImage(
+                    image: AssetImage("Assets/Back_image.jpg"),
+                    fit: BoxFit.cover,
+                    colorFilter:
+                        ColorFilter.mode(Colors.black38, BlendMode.darken))),
             padding: EdgeInsets.all(10),
             child: ListView(
               children: <Widget>[
@@ -37,7 +43,7 @@ class SignupPage extends State<Signup> {
                     ),
                     Text(
                       'Royal Enfield Bike Servicing',
-                      style: TextStyle(fontSize: 20),
+                      style: TextStyle(fontSize: 20, color: Colors.white),
                     ),
                   ],
                 ),
@@ -46,7 +52,7 @@ class SignupPage extends State<Signup> {
                     padding: EdgeInsets.all(10),
                     child: Text(
                       'Sign Up',
-                      style: TextStyle(fontSize: 25, color: Colors.blue),
+                      style: TextStyle(fontSize: 25, color: Colors.black),
                     )),
                 Container(
                   padding: EdgeInsets.all(10),
@@ -55,6 +61,7 @@ class SignupPage extends State<Signup> {
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Full Name',
+                      labelStyle: TextStyle(color: Colors.white),
                     ),
                   ),
                 ),
@@ -65,6 +72,7 @@ class SignupPage extends State<Signup> {
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Email Address',
+                      labelStyle: TextStyle(color: Colors.white),
                     ),
                   ),
                 ),
@@ -75,6 +83,7 @@ class SignupPage extends State<Signup> {
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Phone Number',
+                      labelStyle: TextStyle(color: Colors.white),
                     ),
                   ),
                 ),
@@ -85,6 +94,7 @@ class SignupPage extends State<Signup> {
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'User Name',
+                      labelStyle: TextStyle(color: Colors.white),
                     ),
                   ),
                 ),
@@ -96,6 +106,7 @@ class SignupPage extends State<Signup> {
                     decoration: InputDecoration(
                       border: OutlineInputBorder(),
                       labelText: 'Password',
+                      labelStyle: TextStyle(color: Colors.white),
                     ),
                   ),
                 ),
